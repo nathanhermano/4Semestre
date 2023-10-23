@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/958bdaab6b.js" crossorigin="anonymous">;</script>  
+    <title>Calculador de área de um Quadrado</title>
+</head>
+<body>
+    <section class="buttom">
+        <a href="index.html"><span></span>Voltar</a>
+    <div class="container">
+        <h1>Calculadora de Área de Quadrado</h1>
+        <h2 id="politext">Insira abaixo o comprimento dos lados do quadrado:</h2>
+        <input type="number" id="lado" placeholder="Comprimento dos lados">
+        <br>
+        <button id="btt" onclick="calcularArea()">Calcular Área</button>
+        <p>A área do quadrado é: <span id="resultado"></span></p>
+    </div>
+
+    <script>
+        function calcularArea() {
+            const lado = parseFloat(document.getElementById('lado').value);
+
+            if (isNaN(lado) || lado <= 0) {
+                alert('Por favor, insira um valor válido para o comprimento do lado.');
+                return;
+            }
+
+            const area = lado * lado;
+            document.getElementById('resultado').textContent = area.toFixed(2);
+        }
+    </script>
+</body>
+</html>

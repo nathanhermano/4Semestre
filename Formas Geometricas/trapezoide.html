@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/958bdaab6b.js" crossorigin="anonymous">;</script>  
+    <title>Calculador de Trapezoide</title>
+</head>
+
+
+<body>
+    <section class="buttom">
+        <a href="index.html"><span></span>Voltar</a>
+    <div class="container">
+        <h1>Calculadora de Área de Trapézio Irregular</h1>
+        <input type="number" id="ladoA" placeholder="Comprimento do Lado A">
+        <br>
+        <input type="number" id="ladoB" placeholder="Comprimento do Lado B">
+        <br>
+        <input type="number" id="altura" placeholder="Informe a Altura">
+        <br>
+        <button id="btt" onclick="calcularArea()">Calcular Área</button>
+        <p>A área do trapézio irregular é: <span id="resultado"></span></p>
+    </div>
+
+    <script>
+        function calcularArea() {
+            const ladoA = parseFloat(document.getElementById('ladoA').value);
+            const ladoB = parseFloat(document.getElementById('ladoB').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+
+            if (isNaN(ladoA) || isNaN(ladoB) || isNaN(altura) || ladoA <= 0 || ladoB <= 0 || altura <= 0) {
+                alert('Por favor, insira valores válidos para os lados e a altura.');
+                return;
+            }
+
+            const area = ((ladoA + ladoB) * altura) / 2;
+            document.getElementById('resultado').textContent = area.toFixed(2);
+        }
+    </script>
+</body>
+</html>

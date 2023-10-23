@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/958bdaab6b.js" crossorigin="anonymous">;</script>  
+    <title>Calculador de Coroa do Circulo</title>
+</head>
+
+<body>
+        <section class="buttom">
+        <a href="index.html"><span></span>Voltar</a>
+    <div class="container">
+
+        <h1>Calculadora de Área de Coroa de Círculo</h1>
+        <input type="number" id="raioMaior" placeholder="Informe o raio maior">
+        <br>
+        <input type="number" id="raioMenor" placeholder="Informe o raio menor">
+        <br>
+        <button id="btt" onclick="calcularArea()">Calcular Área</button>
+        <p>A área da coroa de círculo é: <span id="resultado"></span></p>
+    </div>
+
+    <script>
+        function calcularArea() {
+            const raioMaior = parseFloat(document.getElementById('raioMaior').value);
+            const raioMenor = parseFloat(document.getElementById('raioMenor').value);
+
+            if (isNaN(raioMaior) || isNaN(raioMenor)) {
+                alert('Por favor, insira valores válidos para os raios.');
+                return;
+            }
+
+            if (raioMaior <= raioMenor) {
+                alert('O raio maior deve ser maior que o raio menor.');
+                return;
+            }
+
+            const area = Math.PI * (raioMaior ** 2 - raioMenor ** 2);
+            document.getElementById('resultado').textContent = area.toFixed(2);
+        }
+    </script>
+</body>
+</html>

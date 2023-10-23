@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/958bdaab6b.js" crossorigin="anonymous">;</script>  
+    <title>Calculador de Circulo Aninhado</title>
+</head>
+
+<body>
+    <section class="buttom">
+        <a href="index.html"><span></span>Voltar</a>
+    <div class="container">
+        <h1>Calculadora de Área de Setor Circular</h1>
+        <input type="number" id="raioMaior" placeholder="Raio do círculo maior">
+        <br>
+        <input type="number" id="angulo" placeholder="Ângulo do setor em graus">
+        <br>
+        <button id="btt" onclick="calcularArea()">Calcular Área</button>
+        <p>A área do setor circular é: <span id="resultado"></span></p>
+    </div>
+
+    <script>
+        function calcularArea() {
+            const raioMaior = parseFloat(document.getElementById('raioMaior').value);
+            const angulo = parseFloat(document.getElementById('angulo').value);
+
+            if (isNaN(raioMaior) || isNaN(angulo) || raioMaior <= 0 || angulo <= 0 || angulo > 360) {
+                alert('Por favor, insira valores válidos para o raio do círculo maior e o ângulo do setor.');
+                return;
+            }
+
+            const areaCirculoMaior = Math.PI * (raioMaior ** 2);
+            const areaSetor = (angulo / 360) * areaCirculoMaior;
+
+            // Calcula o comprimento do raio do setor
+            const raioSetor = (angulo / 360) * raioMaior;
+
+            // Calcula a área do triângulo formado pelo raio do setor
+            const areaTriangulo = (raioSetor * raioMaior) / 2;
+
+            // Área final = Área do setor - Área do triângulo + Área do círculo maior
+            const areaFinal = areaSetor - areaTriangulo + areaCirculoMaior;
+
+            document.getElementById('resultado').textContent = areaFinal.toFixed(2);
+        }
+    </script>
+</body>
+</html>

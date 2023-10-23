@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/958bdaab6b.js" crossorigin="anonymous">;</script>  
+    <title>Calculador de Circulo</title>
+
+<body>
+    <body>
+        <section class="buttom">
+        <a href="index.html"><span></span>Voltar</a>
+
+    <div id="container">
+        <h1>Calculadora de Área de Círculo</h1>
+        <input type="number" id="raio" placeholder="Digite o raio">
+        <button onclick="calcularArea()">Calcular Área</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcularArea() {
+            var raio = parseFloat(document.getElementById("raio").value);
+            if (isNaN(raio) || raio <= 0) {
+                alert("Por favor, digite um valor válido para o raio.");
+                return;
+            }
+            var area = Math.PI * Math.pow(raio, 2);
+            document.getElementById("resultado").innerHTML = "A área do círculo é: " + area.toFixed(2);
+        }
+    </script>
+</body>
+</html>

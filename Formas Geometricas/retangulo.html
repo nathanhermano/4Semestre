@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/958bdaab6b.js" crossorigin="anonymous">;</script>  
+    <title>Calculador de retângulo</title>
+</head>
+<body>
+    <section class="buttom">
+        <a href="index.html"><span></span>Voltar</a>
+    <div id="container">
+        <h1>Calculadora de Área de Retângulo</h1>
+        <input type="number" id="largura" placeholder="Digite a largura"><br>
+        <input type="number" id="altura" placeholder="Digite a altura"><br>
+        <button id="btt" onclick="calcularArea()">Calcular Área</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcularArea() {
+            var largura = parseFloat(document.getElementById("largura").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+
+            if (isNaN(largura) || isNaN(altura) || largura <= 0 || altura <= 0) {
+                alert("Por favor, digite valores válidos para largura e altura.");
+                return;
+            }
+
+            var area = largura * altura;
+            document.getElementById("resultado").innerHTML = "A área do retângulo é: " + area.toFixed(2);
+        }
+    </script>
+</body>
+</html>

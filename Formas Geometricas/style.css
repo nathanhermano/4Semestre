@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Inter:wght@300&family=Kanit:ital,wght@0,400;1,300&family=Lilita+One&family=Nunito:wght@300&family=Poppins:wght@100;200;300;400;500;600;700&family=Press+Start+2P&family=Sarala:wght@400;700&display=swap');    
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    background: #0d1721;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 60px;
+    color:cadetblue ;
+    letter-spacing: 2px;
+    font-size: 30px;
+    text-align: center;
+}
+
+span{
+    color: #fff;
+}
+
+i{
+    font-size: 35px;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color:aquamarine ;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: center;
+}
+
+    
+.imagens img{
+    height: 200px;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.4s ease-in-out;
+}
+
+.imagens img:hover{
+    transform: scale(1.2);
+}
+
+.buttom a{
+        width: 150px;
+        display: inline-block;
+        margin: 0 10px;
+        padding: 12px 0;
+        color: #fff;
+        border: 0.5px solid #fff;
+        position: relative;
+        z-index: 1;
+        transition: color 0.5s;
+        text-align: center;
+}
+.formulario{
+    color: aliceblue;
+    margin-left: 30% ;
+    margin-top: 5%;
+    font-size: 25px;
+    background-color:steelblue;
+    margin-right: 30%;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.CampodeResposta{
+    font-size: 20px;
+    text-align: center;
+}
+.botao{
+    border-radius: 20px;
+}
+.resultadocalculo{
+    font-size: xx-large;
+    color: #fff;
+}
+#raio{
+    text-align: center;
+    margin-left:37% ;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#raioMenor{
+    text-align: center;
+    margin-left:540px ;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#raioMaior{
+    text-align: center;
+    margin-left:540px ;
+    font-size: 20px;
+}
+#altura{
+    text-align: center;
+    margin-left:540px ;
+    font-size: 20px;
+}
+#btt{
+    text-align: center;
+    margin-left:587px ;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#largura{
+    text-align: center;
+    margin-left:540px ;
+    font-size: 20px;
+}
+#lado{
+    text-align: center;
+    margin-left:540px ;
+    font-size: 20px;
+}
+#ladoA{
+    text-align: center;
+    margin-left:540px ;
+    font-size: 20px;
+}
+
+#ladoB{
+    text-align: center;
+    margin-left:540px ;
+    font-size: 20px;
+}
+#lados{
+    text-align: center;
+    margin-left:610px ;
+    font-size: 20px;
+}
+#politext{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 60px;
+    color:#fff;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: center;
+}
+#angulo{
+    text-align: center;
+    margin-left:540px ;
+    font-size: 20px;
+}

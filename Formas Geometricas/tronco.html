@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/958bdaab6b.js" crossorigin="anonymous">;</script>  
+    <title>Calculador de tronco da pirâmide</title>
+</head>
+
+<body>
+    <section class="buttom">
+        <a href="index.html"><span></span>Voltar</a>
+    <div id="container">
+        <h1>Calculadora de Volume de Tronco de Pirâmide</h1>
+        <input type="number" id="raioMenor" placeholder="Digite o raio menor"><br>
+        <input type="number" id="raioMaior" placeholder="Digite o raio maior"><br>
+        <input type="number" id="altura" placeholder="Digite a altura"><br>
+        <button id="btt" onclick="calcularVolume()">Calcular Volume</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcularVolume() {
+            var raioMenor = parseFloat(document.getElementById("raioMenor").value);
+            var raioMaior = parseFloat(document.getElementById("raioMaior").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+
+            if (isNaN(raioMenor) || isNaN(raioMaior) || isNaN(altura) || raioMenor <= 0 || raioMaior <= 0 || altura <= 0) {
+                alert("Por favor, digite valores válidos para os raios e a altura.");
+                return;
+            }
+
+            var volume = (1 / 3) * Math.PI * altura * (Math.pow(raioMaior, 2) + Math.pow(raioMenor, 2) + (raioMaior * raioMenor));
+            document.getElementById("resultado").innerHTML = "O volume do tronco de pirâmide é: " + volume.toFixed(2);
+        }
+    </script>
+</body>
+</html>

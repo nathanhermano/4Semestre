@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/958bdaab6b.js" crossorigin="anonymous">;</script>  
+    <title>Calculador de Poligono de área regular</title>
+</head>
+
+<body>
+    <section class="buttom">
+        <a href="index.html"><span></span>Voltar</a>
+    <div class="container">
+        <h1>Calculadora de Área de Polígono Regular</h1>
+        <h2 id="politext">Selecione a quantidade de lados do polígono:</h2>
+        <select id="lados">
+            <option value="3">Três</option>
+            <option value="4">Quatro</option>
+            <option value="5">Cinco</option>
+            <option value="6">Seis</option>
+            <option value="7">Sete</option>
+            <option value="8">Oito</option>
+            <option value="9">Nove</option>
+            <option value="10">Dez</option>
+        </select>
+        <br>
+        <button id="btt" onclick="calcularArea()">Calcular Área</button>
+        <p>A área do polígono regular é: <span id="resultado"></span></p>
+    </div>
+
+    <script>
+        function calcularArea() {
+            const numLados = parseInt(document.getElementById('lados').value);
+
+            if (isNaN(numLados) || numLados < 3 || numLados > 10) {
+                alert('Por favor, escolha um número válido de lados entre 3 e 10.');
+                return;
+            }
+
+            const lado = 100; // Comprimento do lado (valor hipotético para este exemplo)
+            const apotema = lado / (2 * Math.tan(Math.PI / numLados)); // Cálculo do apótema
+            const areaTriangulo = (lado * apotema) / 2; // Área de um triângulo
+            const areaTotal = areaTriangulo * numLados; // Área total
+
+            document.getElementById('resultado').textContent = areaTotal.toFixed(2);
+        }
+    </script>
+</body>
+</html>
